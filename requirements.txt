@@ -1,6 +1,6 @@
-mlflow
-cloudpickle
-tensorflow
+mlflow==2.10.2
+cloudpickle==2.2.1
+tensorflow==2.15.0
 dash
 dash_bootstrap_components
 keras
