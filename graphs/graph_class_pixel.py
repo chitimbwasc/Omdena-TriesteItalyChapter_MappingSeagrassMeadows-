@@ -48,7 +48,8 @@ run_id = df.loc[df['metrics.accuracy'].idxmax()]['run_id']
 print(f'%%%%%%%%%%%%%%%%%%%% rund_id {run_id} %%%%%%%%%%%%%%%%%%%%%%%')
 requirements = mlflow.artifacts.download_artifacts("runs:/" + run_id + "/model/requirements.txt")
 print(requirements)
-model = mlflow.pyfunc.load_model("runs:/" + run_id + "/model")
+# model = mlflow.pyfunc.load_model("runs:/" + run_id + "/model")
+model = mlflow.keras.load_model("runs:/" + run_id + "/model")
 print('model import succesfull')
 
 
